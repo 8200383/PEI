@@ -1,0 +1,26 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://estg.ipp.pt/ProductTypes" targetNamespace="http://estg.ipp.pt/ProductTypes" elementFormDefault="qualified" xmlns:common="http://estg.ipp.pt/CommonTypes">
+
+    <!-- Import o tipo preço -->
+    <xs:import schemaLocation="commonTypes.xsd" namespace="http://estg.ipp.pt/CommonTypes" />
+
+    <xs:simpleType name="ProductName">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="5" />
+            <xs:maxLength value="35" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="ProductType">
+        <xs:sequence>
+            <xs:element name="Nome" type="ProductName" />
+            <xs:element name="Quantidade" type="xs:integer" />
+            <xs:element name="PrecoUnitario" type="common:Preco" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Produtos">
+        <xs:sequence minOccurs="1">
+            <xs:element name="Produto" type="ProductType" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

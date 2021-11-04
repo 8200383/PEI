@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Fatura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://estg.ipp.pt/Main" xsi:schemaLocation="http://estg.ipp.pt/Main main.xsd">
+    <MoradaFaturacao>Rua da Nora</MoradaFaturacao>
+    <MoradaEnvio>Rua de Paiva</MoradaEnvio>
+    <NumeroFatura>1234567</NumeroFatura>
+    <Data>2005-10-25</Data>
+    <TipoPagamento>MBWAY</TipoPagamento>
+    <Produtos>
+        <Produto>
+            <Nome>TV UHD</Nome>
+            <Quantidade>2</Quantidade>
+            <PrecoUnitario>3.14</PrecoUnitario>
+        </Produto>
+        <Produto>
+            <Nome>Torradeira</Nome>
+            <Quantidade>5</Quantidade>
+            <PrecoUnitario>15.26</PrecoUnitario>
+        </Produto>
+    </Produtos>
+    <TotalSemIVA>98</TotalSemIVA>
+    <IVA>23</IVA>
+    <TotalComIVA>199</TotalComIVA>
+</Fatura>

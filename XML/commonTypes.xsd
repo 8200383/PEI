@@ -1,0 +1,26 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://estg.ipp.pt/CommonTypes" targetNamespace="http://estg.ipp.pt/CommonTypes" elementFormDefault="qualified">
+    <xs:simpleType name="TipoPagamento">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Multibanco" />
+            <xs:enumeration value="Transferência" />
+            <xs:enumeration value="MBWAY" />
+            <xs:enumeration value="Dinheiro" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="NumeroFatura">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="7" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Preco">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="IVA">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="100" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

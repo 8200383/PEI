@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://estg.ipp.pt/Main" targetNamespace="http://estg.ipp.pt/Main" elementFormDefault="qualified" xmlns:common="http://estg.ipp.pt/CommonTypes" xmlns:customer="http://estg.ipp.pt/CustomerTypes" xmlns:product="http://estg.ipp.pt/ProductTypes">
+    <xs:import schemaLocation="commonTypes.xsd" namespace="http://estg.ipp.pt/CommonTypes" />
+    <xs:import schemaLocation="productTypes.xsd" namespace="http://estg.ipp.pt/ProductTypes" />
+
+    <xs:element name="Fatura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MoradaFaturacao" type="xs:string" />
+                <xs:element name="MoradaEnvio" type="xs:string" />
+                <xs:element name="NumeroFatura" type="common:NumeroFatura" />
+                <xs:element name="Data" type="xs:date" />
+                <xs:element name="TipoPagamento" type="common:TipoPagamento" />
+                <xs:element name="Produtos" type="product:produtos" />
+                <xs:element name="TotalSemIVA" type="common:Preco" />
+                <xs:element name="IVA" type="common:IVA" />
+                <xs:element name="TotalComIVA" type="common:Preco" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
